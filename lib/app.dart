@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        scrollbarTheme: ScrollbarThemeData(
+          thumbColor: WidgetStateProperty.all(const Color.fromARGB(255, 20, 121, 172)),
+          thickness: MaterialStateProperty.all(10),
+          radius: Radius.circular(20),
+        ),
+       
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyHomePage(title: 'site Demo Home'),
+    );
+  }
+}
